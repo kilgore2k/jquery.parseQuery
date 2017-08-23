@@ -9,10 +9,10 @@
 	{
 		return decodeURIComponent(str.replace(decodeRE, " "));
 	};
-	$.parseQuery = function(query)
+	$.parseQuery = function(queryString)
 	{
 		var params = {}, e;
-		while(e = re.exec(query))
+		while(e = re.exec(queryString))
 		{
 			var k = decode(e[1]), v = decode(e[2]);
 			if(k.substring(k.length - 2) === '[]')
